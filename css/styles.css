@@ -64,8 +64,9 @@ svg path:hover {
 }
 
 #shape-3 {
-  left: 12.11%;
-  top: 1.65%;
+  left: 0;
+  top: 0;
+  transform: translate(12.11%, 1.65%);
   animation: move-3 10s infinite;
 }
 #shape-3 path {
@@ -79,15 +80,15 @@ svg path:hover {
 }
 @keyframes move-3 {
   50% {
-  left: 16%;
-  top: 0.65%;
+    transform: translate(16%, 0.65%);
   }
 }
 
 
 #shape-4 {
-  left: 27.17%;
-  top: 8%;
+  left: 0;
+  top: 0;
+  transform: translate(27.17%, 8%);
   animation: move-4 10s infinite;
 }
 #shape-4 path {
@@ -101,15 +102,15 @@ svg path:hover {
 }
 @keyframes move-4 {
   50% {
-  left: 28.4%;
-  top: 10.4%;
+  transform: translate(28.4%, 10.4%);
   }
 }
 
 
 #shape-5 {
-  left: 44.36%;
-  top: 2.4%;
+  left: 0;
+  top: 0;
+  transform: translate(44.36%, 2.4%);
   animation: move-5 10s infinite;
 }
 #shape-5 path {
@@ -123,14 +124,14 @@ svg path:hover {
 }
 @keyframes move-5 {
   50% {
-  left: 46.6%;
-  top: 1.66%;
+    transform: translate(46.6%, 1.66%);
   }
 }
 
 #shape-6 {
-  left: 69.1%;
-  top: 2.4%;
+  left: 0;
+  top: 0;
+  transform: translate(69.1%, 2.4%);
   animation: move-6 10s infinite;
 }
 #shape-6 path {
@@ -144,14 +145,13 @@ svg path:hover {
 }
 @keyframes move-6 {
   50% {
-  top: 0.9%;
+  transform: translate(69.1%, 0.9%);
   }
 }
 
 #shape-7 {
   left: 1%;
   top: 53%;
-  animation: move-7 10s infinite;
 }
 #shape-7 path {
   d:path('M256.2 438.8C250.7 420.8 267.2 402 272.6 385.9C279.9 364.3 272.7 342.4 258 325.5C220 281.5 170.3 315.1 123.8 299.9C40.8 272.8 85.6 200.1 117.5 152.2C133.4 128.3 153.5 99.7 150.4 69.4C146.3 29.2 106.7 -6.90001 65.5 1.49998C32.2 8.19998 10.4 45.3 4.20004 76.4C-0.599958 100.5 9.60004 149.2 44.6 144.9C65.4 142.4 64.5 112.4 68.4 96.9C72.7 79.7 95.4 53.3 110.8 80.4C122.5 101 92 135 79.8 148.9C58 173.6 24.2 186.1 8.60004 216.2C-16 263.7 25.8 292.3 37.8 333.8C44.8 358.2 34.1 381.3 33.2 405.6C32.4 425.6 37.9 446.3 49.2 462.9C70.9 494.7 123.7 501.7 141.1 460.4C159.8 415.9 96.3 411.6 104.3 371.2C111.9 333.2 169.8 335 196.6 347C214 354.8 234.2 373.1 221.9 393.9C213.9 407.4 195.8 408.1 185.1 418.5C148.8 453.6 207.3 490.5 237.7 496.6C253.9 499.8 282 500.4 283.3 477.3C284.5 459.1 261.1 454.7 256.2 438.8Z');
@@ -164,8 +164,9 @@ svg path:hover {
 }
 
 #shape-8 {
-  left: 6.1%;
-  top: 41.5%;
+  left: 0;
+  top: 0;
+  transform: translate(6.1%, 41.5%);
   animation: move-8 10s infinite;
 }
 #shape-8 path {
@@ -179,14 +180,14 @@ svg path:hover {
 }
 @keyframes move-8 {
   50% {
-  left: 8.2%;
-  top: 42.7%;
+    transform: translate(8.2%, 42.7%);
   }
 }
 
 #shape-9 {
-  left: 11.85%;
-  top: 45.2%;
+  left: 0;
+  top: 0;
+  transform: translate(11.85%, 45.2%);
   animation: move-9 10s infinite;
 }
 #shape-9 path {
@@ -200,14 +201,14 @@ svg path:hover {
 }
 @keyframes move-9 {
   50% {
-  left: 13.9%;
-  top: 39.2%;
+    transform: translate(13.8%, 39.2%);
   }
 }
 
 #shape-10 {
-  left: 27%;
-  top: 29%;
+  left: 0;
+  top: 0;
+  transform: translate(27%, 29%);
   animation: move-10 10s infinite;
 }
 #shape-10 path {
@@ -221,13 +222,14 @@ svg path:hover {
 }
 @keyframes move-10 {
   50% {
-  left: 29%;
+    transform: translate(29%, 29%);
   }
 }
 
 #shape-11 {
-  left: 52.8%;
-  top: 14.5%;
+  left: 0;
+  top: 0;
+  transform: translate(52.8%, 14.5%);
   animation: move-11 10s infinite;
 }
 #shape-11 path {
@@ -241,13 +243,14 @@ svg path:hover {
 }
 @keyframes move-11 {
   50% {
-  top: 13.8%;
+  transform: translate(52.8%, 13.8%);
   }
 }
 
 #shape-12 {
-  left: 38.5%;
-  top: 48%;
+  left: 0;
+  top: 0;
+  transform: translate(38.5%, 48%);
   animation: move-12 10s infinite;
 }
 #shape-12 path {
@@ -261,13 +264,14 @@ svg path:hover {
 }
 @keyframes move-12 {
   50% {
-  top: 50.6%;
+  transform: translate(38.5%, 50.6%);
   }
 }
 
 #shape-13 {
-  left: 53.2%;
-  top: 47%;
+  left: 0;
+  top: 0;
+  transform: translate(53.2%, 47%);
   animation: move-13 10s infinite;
 }
 #shape-13 path {
@@ -281,13 +285,14 @@ svg path:hover {
 }
 @keyframes move-13 {
   50% {
-  left: 52.8%;
+  transform: translate(52.8%, 47%);
   }
 }
 
 #shape-14 {
-  left: 58.5%;
-  top: 44%;
+  left: 0;
+  top: 0;
+  transform: translate(58.5%, 44%);
   animation: move-14 10s infinite;
 }
 #shape-14 path {
@@ -301,13 +306,14 @@ svg path:hover {
 }
 @keyframes move-14 {
   50% {
-  top: 42.3%;
+  transform: translate(58.5%, 42.3%);
   }
 }
 
 #shape-15 {
-  left: 68.6%;
-  top: 26.85%;
+  left: 0;
+  top: 0;
+  transform: translate(68.6%, 26.85%);
   animation: move-15 10s infinite;
 }
 #shape-15 path {
@@ -321,14 +327,14 @@ svg path:hover {
 }
 @keyframes move-15 {
   50% {
-  left: 68.4%;
-  top: 26%;
+  transform: translate(68.4%, 26%);
   }
 }
 
 #shape-16 {
-  left: 83.17%;
-  top: 18.7%;
+  left: 0;
+  top: 0;
+  transform: translate(83.17%, 18.7%);
   animation: move-16 10s infinite;
 }
 #shape-16 path {
@@ -342,14 +348,14 @@ svg path:hover {
 }
 @keyframes move-16 {
   50% {
-  left: 85.3%;
-  top: 13.78%;
+  transform: translate(85.3%, 13.78%);
   }
 }
 
 #shape-17 {
-  left: 36.8%;
-  top: 81.3%;
+  left: 0;
+  top: 0;
+  transform: translate(36.8%, 81.3%);
   animation: move-17 10s infinite;
 }
 #shape-17 path {
@@ -363,14 +369,14 @@ svg path:hover {
 }
 @keyframes move-17 {
   50% {
-  left: 36.9%;
-  top: 74.44%;
+  transform: translate(36.9%, 74.44%);
   }
 }
 
 #shape-18 {
-  left: 76.88%;
-  top: 59.4%;
+  left: 0;
+  top: 0;
+  transform: translate(76.88%, 59.4%);
   animation: move-18 10s infinite;
 }
 #shape-18 path {
@@ -384,7 +390,29 @@ svg path:hover {
 }
 @keyframes move-18 {
   50% {
-  left: 75.48%;
-  top: 61.43%;
+  transform: translate(75.48%, 61.43%);
   }
 }
+
+@media (min-width: 481px) and (min-aspect-ratio: 16/9) {
+  .shapes {
+    height: calc(100vw*9/16);
+    width: 100vw;
+  }
+}
+@media (min-width: 481px) and (max-aspect-ratio: 16/9) {
+  .shapes {
+    height: 100vh;
+    width: calc(100vh*16/9);
+  }
+}
+@media (max-width: 480px) {
+  .shapes {
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg) scale(2.5);
+  }
+}
+/* @media (min-width: 768px) {
+  .shapes {
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg) scale(1);
+  }
+} */
