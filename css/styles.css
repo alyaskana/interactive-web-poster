@@ -411,8 +411,10 @@ svg path:hover {
     transform: translateX(-50%) translateY(-50%) rotate(-90deg) scale(2.5);
   }
 }
-/* @media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .shapes {
-    transform: translateX(-50%) translateY(-50%) rotate(-90deg) scale(1);
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    height: 100vw;
+    width: calc(100vw*16/9);
   }
-} */
+}
