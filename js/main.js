@@ -1,27 +1,20 @@
-// const shapesElement = document.querySelector('.shapes');
+const shapeList = [...document.querySelectorAll('.shape')]
+const shapesInViewport = shapeList.filter((shape) => {
+  const bounding = shape.getBoundingClientRect()
+  const widthGap = bounding.width * 0.5
+  const heightGap = bounding.height * 0.5
+  
+  return bounding.top >= 0 - heightGap &&
+	bounding.left >= 0 - widthGap &&
+	bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + widthGap &&
+	bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + heightGap
+})
+let colorClasses = []
+shapesInViewport.forEach(shape => {
+  if (colorClasses.length == 0) {
+    colorClasses = ['red', 'blue', 'light-blue', 'beige']
+  }
 
-// function handleResize() {
-//   if (window.matchMedia("(min-width: 480px)").matches) {
-//     desktopResize()
-//   } else {
-//     /* the viewport is less than 400 pixels wide */
-//   }
-// }
-// function desktopResize() {
-//   if (this.innerWidth / this.innerHeight >= 16 / 9) {
-//     shapesElement.style.height = "calc(100vw*9/16)"; 
-//     shapesElement.style.width = "100vw"
-//   } else {
-//     shapesElement.style.height = "100vh"; 
-//     shapesElement.style.width = "calc(100vh*16/9)"
-//   }
-// }
-// function mobileResize() {
-//   if () {
-
-//   } else {
-
-//   }
-// }
-// handleResize()
-// window.addEventListener("resize", handleResize)
+  const colorClass = colorClasses.splice(Math.floor(Math.random() * colorClasses.length), 1)[0]; 
+  shape.classList.add(colorClass)
+});
