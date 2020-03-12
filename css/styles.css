@@ -10,11 +10,20 @@
 .red {
   stroke: var(--red);
 }
+.active.red {
+  fill: var(--red);
+}
 .blue {
   stroke: var(--blue);
 }
+.active.blue {
+  fill: var(--blue);
+}
 .light-blue {
   stroke: var(--light-blue);
+}
+.active.light-blue {
+  fill: var(--light-blue);
 }
 .beige {
   stroke: var(--beige);
@@ -25,7 +34,9 @@
 .beige:hover {
   stroke-width: 4;
 }
-
+body {
+  overflow: hidden;
+}
 .wrapper {
   height: 100vh;
   width: 100vw;
@@ -47,14 +58,14 @@ svg {
   overflow: visible;
   pointer-events: none;
 }
-svg path {
+.shape {
   fill: var(--beige);
-  stroke-width: 0;
-  transition: 0.5s;
+  stroke-width: 2;
+  transition: stroke-width 0.5s, fill 0.5s;
   pointer-events: fill;
 }
 
-svg path:hover {
+.shape:hover {
   stroke-width: 4;
 }
 
