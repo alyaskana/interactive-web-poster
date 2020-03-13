@@ -62,7 +62,7 @@ function addFish(shape) {
     anime({
       targets: fish,
       translateX: '100vw',
-      duration: 15000,
+      duration: 10000,
       easing: 'linear',
       loop: true
     })
