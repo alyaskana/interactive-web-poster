@@ -6,7 +6,9 @@
   --light-blue: #7AD1E4;
   --beige: #F3ECDD;
 }
-
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .red {
   stroke: var(--red);
 }
@@ -34,6 +36,10 @@
 .beige:hover {
   stroke-width: 4;
 }
+.active {
+  z-index: 10;
+}
+
 body {
   overflow: hidden;
 }
