@@ -61,7 +61,7 @@ svg {
 }
 .shape {
   fill: var(--beige);
-  stroke-width: 2;
+  stroke-width: 0;
   transition: stroke-width 0.5s, fill 0.5s;
   pointer-events: fill;
 }
