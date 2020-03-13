@@ -52,27 +52,32 @@ function generateFishSvg(height = 66) {
 }
 
 // On-off fish on screen
-function getRandomHeightPosition(min, max) {
+function getRandomByRange(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+function createFish(shape) {
+  const fish = generateFishSvg(getRandomByRange(3,6))
+  fish.classList.add(shape.parentElement.id)
+  fish.style.display = "block";
+  fish.style.top = `${getRandomByRange(5, 85)}vh`
+  const fishWidth = fish.getBoundingClientRect().width
+  fish.style.left = -fishWidth + 'px'
+  fish.style.zIndex = getRandomByRange(-1, 0)
+
+  anime({
+    targets: fish,
+    translateX: '100vw',
+    duration: getRandomByRange(5000, 10000),
+    easing: 'linear',
+    loop: true
+  })
+}
 function toggleFish(shape) {
   if (shape.classList.contains("active")) {
-    const fish = generateFishSvg(5)
-    fish.classList.add(shape.parentElement.id)
-    fish.style.display = "block";
-    fish.style.top = `${getRandomHeightPosition(5, 85)}vh`
-    const fishWidth = fish.getBoundingClientRect().width
-    fish.style.left = -fishWidth + 'px'
-
-    anime({
-      targets: fish,
-      translateX: '100vw',
-      duration: 10000,
-      easing: 'linear',
-      loop: true
-    })
+    createFish(shape)
+    createFish(shape)
   } else {
     const fishList = document.querySelectorAll("." + shape.parentElement.id)
     fishList.forEach(fish => fish.remove());
