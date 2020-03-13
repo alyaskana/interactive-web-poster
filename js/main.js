@@ -1,4 +1,5 @@
-// ======================== FISH =============================
+// SET RANDOM COLOR CLASS TO SHAPES IN VIEWPORT
+
 const shapeList = [...document.querySelectorAll('.shape')]
 const shapesInViewport = shapeList.filter((shape) => {
   const bounding = shape.getBoundingClientRect()
@@ -10,7 +11,7 @@ const shapesInViewport = shapeList.filter((shape) => {
 	bounding.right <= (window.innerWidth) + widthGap &&
 	bounding.bottom <= (window.innerHeight) + heightGap
 })
-
+// 
 let colorClasses = []
 shapesInViewport.forEach(shape => {
   if (colorClasses.length == 0) {
@@ -21,19 +22,19 @@ shapesInViewport.forEach(shape => {
   shape.classList.add(colorClass)
 });
 
-
+// SET ACTIVE CLASS ON CLICK
 shapeList.forEach(shape => {
   shape.addEventListener('click', (event) => {
     event.target.classList.toggle('active')
   })
 });
 
+// GET ROOT COLOR VALUE
 function getColor(colorName) {
   return window.getComputedStyle(document.documentElement).getPropertyValue(`--${colorName}`)
 } 
 
-
-
+// CREATE FISH SVG
 function generateFishSvg(height = 66) {
   const width = height*140/66
   let fish = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
@@ -50,12 +51,18 @@ function generateFishSvg(height = 66) {
   return fish
 }
 
-function addFish(shape) {
+// On-off fish on screen
+function getRandomHeightPosition(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function toggleFish(shape) {
   if (shape.classList.contains("active")) {
     const fish = generateFishSvg(5)
     fish.classList.add(shape.parentElement.id)
     fish.style.display = "block";
-    fish.style.top = "50px"
+    fish.style.top = `${getRandomHeightPosition(5, 85)}vh`
     const fishWidth = fish.getBoundingClientRect().width
     fish.style.left = -fishWidth + 'px'
 
@@ -72,10 +79,11 @@ function addFish(shape) {
   }
 }
 
+// СИНИЕ КНОПКИ ЧТО АКТИВИРУЮТ
 document.querySelectorAll('.blue').forEach((shape, index) => {
   shape.addEventListener('click', () => {
     if (index%2 == 0) {
-      addFish(shape)
+      toggleFish(shape)
     } else {
       // invertColors()
       // TODO: ДОБАВИТЬ ЧТО ДЕЛАЮТ НЕЧЕТНЫЕ КНОПКИ
