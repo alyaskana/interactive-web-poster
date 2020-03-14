@@ -144,16 +144,21 @@ function toggleBubble(shape) {
 // CREATE CRAB SVG
 function generateCrabSvg(height = 92) {
   const width = height*163/92
+  // let crabWrap = document.createElement('div')
+  // crabWrap.classList.add('crabWrap')
   let crab = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
   crab.setAttribute('width', width + 'vh')
   crab.setAttribute('height', height + 'vh')
   crab.setAttribute('viewBox', '0 0 163 92')
   crab.style.display = "none"
+  crab.style.transformOrigin = 'center'
   let path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
   path.setAttribute('d', 'M-0.000216082 15.1001C-1.00022 24.3001 26.4998 23.5001 24.1998 30.9001C21.8998 38.3001 1.59978 26.3001 3.19978 35.5001C4.79978 44.7001 29.6998 42.9001 28.3998 50.3001C27.0998 57.7001 4.59978 53.9001 6.59978 63.4001C8.59978 72.9001 36.0998 56.6001 44.5998 59.9001C53.0998 63.2001 61.6998 72.1001 73.6998 74.3001C85.7998 76.5001 99.9998 71.0001 106.8 73.0001C113.6 75.0001 124.7 93.2001 136.2 91.6001C147.7 90.1001 118.8 75.7001 121.1 69.4001C123.4 63.1001 153.4 78.3001 154.2 73.1001C155 67.9001 132 62.7001 133.8 57.7001C135.6 52.7001 161.3 64.3001 162.3 57.0001C163.3 49.8001 132.4 47.5001 133.3 41.0001C134.2 34.5001 154.9 43.3001 154.8 37.6001C154.7 31.9001 110.7 25.8001 106.5 21.9001C102.3 18.0001 100.2 8.30014 95.2998 8.40014C90.3998 8.50014 87.9998 17.1001 78.1998 15.0001C68.3998 12.9001 71.1998 0.50014 62.2998 0.000139918C53.3998 -0.49986 63.9998 18.1001 51.0998 17.0001C38.1998 15.9001 0.999784 5.80014 -0.000216082 15.1001Z')
   path.setAttribute('fill', getColor('red'))
 
   crab.appendChild(path)
+  // crabWrap.appendChild(crab)
+  // document.querySelector('body').appendChild(crabWrap)
   document.querySelector('body').appendChild(crab)
 
   return crab
@@ -164,16 +169,33 @@ function createCrab(shape) {
   const crab = generateCrabSvg(getRandomByRange(5,8))
   crab.classList.add(shape.parentElement.id)
   crab.style.display = "block";
-  crab.style.top = '90vh'
+  crab.style.top = '91vh'
   const crabWidth = crab.getBoundingClientRect().width
-  crab.style.left = -crabWidth + 'px'
+  // crab.style.left = -crabWidth + 'px'
+  crab.style.left = '5vw'
 
   anime({
     targets: crab,
+    keyframes: [
+      {rotate: -30},
+      {rotate: 5}
+    ],
+    loop: true,
+    direction: 'alternate',
+    easing: 'linear'
+  })
+
+  let crabWrap = document.createElement('div')
+  crabWrap.classList.add('crabWrap')
+  crabWrap.appendChild(crab)
+  document.querySelector('body').appendChild(crabWrap)
+
+  anime({
+    targets: crabWrap,
     translateX: '100vw',
-    duration: getRandomByRange(5000, 10000),
+    loop: true,
     easing: 'linear',
-    loop: true
+    duration: getRandomByRange(7000, 10000)
   })
 }
 // ON-OFF CRAB ON SCREEN
