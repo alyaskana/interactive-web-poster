@@ -40,6 +40,14 @@
   z-index: 10;
 }
 
+.bubble {
+  border: 10px solid var(--red);
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  z-index: 15;
+  position: absolute;
+}
+
 body {
   overflow: hidden;
 }
