@@ -171,8 +171,7 @@ function createCrab(shape) {
   crab.style.display = "block";
   crab.style.top = '91vh'
   const crabWidth = crab.getBoundingClientRect().width
-  // crab.style.left = -crabWidth + 'px'
-  crab.style.left = '5vw'
+  crab.style.left = -crabWidth + 'px'
 
   anime({
     targets: crab,
