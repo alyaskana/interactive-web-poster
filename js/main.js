@@ -71,7 +71,7 @@ function createFish(shape) {
   anime({
     targets: fish,
     translateX: '100vw',
-    duration: getRandomByRange(5000, 10000),
+    duration: window.innerWidth / 750 * getRandomByRange(5000, 10000),
     easing: 'linear',
     loop: true
   })
