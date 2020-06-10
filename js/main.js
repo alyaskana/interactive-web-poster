@@ -242,7 +242,7 @@ document.querySelectorAll('.blue').forEach((shape, index) => {
 function createBubbleElement() {
   let bubble = document.createElement('div')
   bubble.classList.add('bubble')
-  let size = `${getRandomByRange(3,20)}vw`
+  let size = `${getRandomByRange(5,20)}vw`
   bubble.style.width = size
   bubble.style.height = size
   bubble.style.display = 'none'
